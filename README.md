@@ -13,7 +13,7 @@ A free utility to combine multiple SVGs into one SVG element, written in GO.
 
 **Direction:** Multiple options to direction horizontal, vertical available.
 
-**Dependecy Free:** No need to install any dependencies from `pip`, `npm`. Just download and run.
+**Dependency Free:** No need to install any dependencies from `pip`, `npm`. Just download and run.
 
 # C.I
 
