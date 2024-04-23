@@ -17,6 +17,21 @@ A free utility to combine multiple SVGs into one SVG element, written in GO.
 
 # C.I
 
+![go-build-time](https://coveritup.app/badge?org=kevincobain2000&repo=go-merge-svg&type=go-build-time&branch=master)
+![go-test-runtime](https://coveritup.app/badge?org=kevincobain2000&repo=go-merge-svg&type=go-test-runtime&branch=master)
+![coverage](https://coveritup.app/badge?org=kevincobain2000&repo=go-merge-svg&type=coverage&branch=master)
+![go-binary-size](https://coveritup.app/badge?org=kevincobain2000&repo=go-merge-svg&type=go-binary-size&branch=master)
+![go-mod-dependencies](https://coveritup.app/badge?org=kevincobain2000&repo=go-merge-svg&type=go-mod-dependencies&branch=master)
+![allocs-per-op](https://coveritup.app/badge?org=kevincobain2000&repo=go-merge-svg&type=allocs-per-op&branch=master)
+
+---
+
+![go-build-time](https://coveritup.app/chart?org=kevincobain2000&repo=go-merge-svg&type=go-build-time&output=svg&width=160&height=160&branch=master&line=fill)
+![go-test-runtime](https://coveritup.app/chart?org=kevincobain2000&repo=go-merge-svg&type=go-test-runtime&output=svg&width=160&height=160&branch=master&line=fill)
+![coverage](https://coveritup.app/chart?org=kevincobain2000&repo=go-merge-svg&type=coverage&output=svg&width=160&height=160&branch=master&line=fill)
+![go-binary-size](https://coveritup.app/chart?org=kevincobain2000&repo=go-merge-svg&type=go-binary-size&output=svg&width=160&height=160&branch=master&line=fill)
+![go-mod-dependencies](https://coveritup.app/chart?org=kevincobain2000&repo=go-merge-svg&type=go-mod-dependencies&output=svg&width=160&height=160&branch=master&line=fill)
+![allocs-per-op](https://coveritup.app/chart?org=kevincobain2000&repo=go-merge-svg&type=allocs-per-op&output=svg&width=160&height=160&branch=master&line=fill)
 
 
 # Install
