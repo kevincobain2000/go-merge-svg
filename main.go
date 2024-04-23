@@ -95,12 +95,12 @@ func loadSVGs(s svg.SVG, files []string) []svg.SVG {
 
 func SetupFlags() {
 	flag.BoolVar(&f.version, "version", false, "prints version")
-	flag.StringVar(&f.direction, "direction", "vertical", "direction of the merge")
-	flag.Var(&f.files, "files", "files to merge")
-	flag.Float64Var(&f.margin, "margin", 0, "margin between the SVGs")
+	flag.StringVar(&f.direction, "direction", "vertical", "direction of the merge - horizontal, vertical or grid")
+	flag.Var(&f.files, "files", "svg files path to merge")
+	flag.Float64Var(&f.margin, "margin", 10, "margin between the SVGs")
 
-	flag.IntVar(&f.cols, "cols", 0, "number of columns")
-	flag.IntVar(&f.rows, "rows", 0, "number of rows")
+	flag.IntVar(&f.cols, "cols", 0, "number of columns (in case --direction=grid)")
+	flag.IntVar(&f.rows, "rows", 0, "number of rows (in case --direction=grid)")
 
 	flag.Parse()
 

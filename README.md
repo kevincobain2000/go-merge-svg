@@ -54,18 +54,32 @@ gms --files=svg1.svg --files=svg2.svg
 
 
 ```sh
-gms --files=svg1.svg --files=svg2.svg --direction=vertical --margin=10
+# with direction horizontal
+gms --files=svg1.svg --files=svg2.svg --direction=horizontal --margin=10
+
+# with direction vertical
+gms --files=svg1.svg --files=svg2.svg --direction=horizontal --margin=10
+
+# with direction grid
+gms --files=svg1.svg --files=svg2.svg --direction=grid --cols=2 --rows=2 --margin=10
+
+# output to a file
+gms --files=svg1.svg --files=svg2.svg > output.svg
 ```
 
 **All Options**
 
 ```sh
+  -cols int
+    	number of columns (in case --direction=grid)
   -direction string
-    	direction of the merge (default "vertical")
+    	direction of the merge - horizontal, vertical or grid (default "vertical")
   -files value
-    	files to merge
+    	svg files path to merge
   -margin float
-    	margin between the SVGs
+    	margin between the SVGs (default 10)
+  -rows int
+    	number of rows (in case --direction=grid)
   -version
     	prints version
 ```
