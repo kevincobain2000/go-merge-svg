@@ -9,7 +9,7 @@ A free utility to combine multiple SVGs into one SVG element, written in GO.
 
 **Quick Setup:** One command to install lighweight binary.
 
-**Blazing speeds:** Combines multiple SVGs in just 10 seconds.
+**Blazing speeds:** Combines multiple SVGs in just milli-seconds.
 
 **Direction:** Multiple options to direction horizontal, vertical available.
 
