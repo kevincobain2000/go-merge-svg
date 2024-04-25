@@ -75,7 +75,7 @@ func Merge(f Flags) []byte {
 }
 
 func loadSVGs(s svg.SVG, files []string) []svg.SVG {
-	svgs := []svg.SVG{}
+	svgs := make([]svg.SVG, 0, len(files))
 
 	for _, file := range files {
 		data, err := os.ReadFile(file)
