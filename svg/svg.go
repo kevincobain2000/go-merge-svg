@@ -14,6 +14,7 @@ type SVG struct {
 	Height  float64 `xml:"height,attr"`
 	ViewBox string  `xml:"viewBox,attr"`
 	Xmlns   string  `xml:"xmlns,attr"`
+	Xlink   string  `xml:"xmlns:xlink,attr"`
 	Version string  `xml:"version,attr"`
 }
 
@@ -22,6 +23,7 @@ func NewSVG() SVG {
 	return SVG{
 		XMLName: xml.Name{Local: "svg"},
 		Xmlns:   "http://www.w3.org/2000/svg",
+		Xlink:   "http://www.w3.org/1999/xlink",
 		Version: "1.1",
 	}
 }
