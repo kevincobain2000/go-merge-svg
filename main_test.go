@@ -4,9 +4,12 @@ import (
 	"os"
 	"strings"
 	"testing"
+
+	svg "github.com/kevincobain2000/go-merge-svg/svg"
 )
 
 func TestMerge(t *testing.T) {
+	s := svg.NewSVG()
 	t.Run("vertical", func(t *testing.T) {
 		f := Flags{
 			direction: "vertical",
@@ -14,7 +17,7 @@ func TestMerge(t *testing.T) {
 			files:     []string{"testdata/1.svg", "testdata/2.svg"},
 		}
 
-		out := Merge(f)
+		out := Merge(f, s)
 		expected, err := os.ReadFile("testdata/1_2_vertical.svg")
 		if err != nil {
 			t.Fatal(err)
@@ -30,7 +33,7 @@ func TestMerge(t *testing.T) {
 			files:     []string{"testdata/1.svg", "testdata/2.svg"},
 		}
 
-		out := Merge(f)
+		out := Merge(f, s)
 		expected, err := os.ReadFile("testdata/1_2_horizontal.svg")
 		if err != nil {
 			t.Fatal(err)
@@ -47,9 +50,10 @@ func BenchmarkMerge(b *testing.B) {
 		margin:    10,
 		files:     []string{"testdata/1.svg", "testdata/2.svg"},
 	}
+	s := svg.NewSVG()
 
 	for i := 0; i < b.N; i++ {
-		Merge(f)
+		Merge(f, s)
 	}
 }
 

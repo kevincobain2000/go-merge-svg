@@ -4,6 +4,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	"strings"
+	"sync"
 )
 
 // SVG represents the root of an SVG file.
@@ -18,14 +19,20 @@ type SVG struct {
 	Version string  `xml:"version,attr"`
 }
 
+var svgPool = sync.Pool{
+	New: func() interface{} {
+		return &SVG{}
+	},
+}
+
 // NewSVG creates a new SVG with default values.
-func NewSVG() SVG {
-	return SVG{
-		XMLName: xml.Name{Local: "svg"},
-		Xmlns:   "http://www.w3.org/2000/svg",
-		Xlink:   "http://www.w3.org/1999/xlink",
-		Version: "1.1",
-	}
+func NewSVG() *SVG {
+	svg := svgPool.Get().(*SVG)
+	svg.XMLName = xml.Name{Local: "svg"}
+	svg.Xmlns = "http://www.w3.org/2000/svg"
+	svg.Xlink = "http://www.w3.org/1999/xlink"
+	svg.Version = "1.1"
+	return svg
 }
 
 // ParseSVG reads and parses an SVG file.

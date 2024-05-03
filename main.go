@@ -39,13 +39,13 @@ func main() {
 		fmt.Println(version)
 		return
 	}
+	s := svg.NewSVG()
 
-	out := Merge(f)
+	out := Merge(f, s)
 	fmt.Println(string(out))
 }
 
-func Merge(f Flags) []byte {
-	s := svg.NewSVG()
+func Merge(f Flags, s *svg.SVG) []byte {
 	svgs := loadSVGs(s, f.files)
 	var combined svg.SVG
 	for i := range svgs {
@@ -74,7 +74,7 @@ func Merge(f Flags) []byte {
 	return output
 }
 
-func loadSVGs(s svg.SVG, files []string) []svg.SVG {
+func loadSVGs(s *svg.SVG, files []string) []svg.SVG {
 	svgs := make([]svg.SVG, 0, len(files))
 
 	for _, file := range files {
